@@ -1,0 +1,15 @@
+package com.yourspraveen.drools
+
+import org.kie.api.runtime.KieRuntime
+import java.util.ArrayList
+import com.yourspraveen.model.Person
+
+
+rule "Sample Rule"
+    agenda-group "Agenda1"
+    dialect "mvel"
+    when
+        $p : Person( )
+    then
+        System.out.println(" got Person : "+ $p.getName());
+end
